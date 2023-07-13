@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh; 
+    background-color: #2b126b;
+    color: white;
+}
+
+#box-cabeça{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+    height: 100px;   
+}
+
+#box-cabeça > p {
+    font-size: 3em;
+    font-weight: bolder;
+    padding: 20px;
+    border-radius: 13px;
+
+    background-color: transparent;
+    box-shadow:  5px 5px 5px #37148f,-5px -5px 10px #37148f;
+    
+    text-transform: uppercase;
+}
+
+#box-cronometro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    gap: 30px;
+
+    border-radius: 15px;
+    background-color: transparent;
+    box-shadow:  5px 5px 5px #37148f,-5px -5px 10px #37148f;
+}
+
+#box-cronometro > div > span{
+        font-size: 5em;
+        font-weight: bold;
+        
+        
+}
+
+#box-btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+       
+    height: 100px;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+
+    background-color: transparent;
+    box-shadow:  5px 5px 5px #37148f,-5px -5px 10px #37148f;
+    border-radius: 7px;
+
+
+}
+#iniciar{
+    padding: 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 100px;
+    background-color: rgb(34, 102, 20);
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    
+}
+
+  #iniciar:active {
+    transform: translateY(-2px);
+  }
+
+#parar{
+    padding: 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 100px;
+    background-color: rgb(173, 29, 29);
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#parar:active {
+    transform: translateY(-2px);
+  }
+
+
+#limpar{
+    padding: 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: 100px;
+    background-color: rgb(87, 87, 87);
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+#limpar:active {
+    transform: translateY(-2px);
+  }
