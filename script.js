@@ -1,7 +1,8 @@
 let milissegundos = 0;
 let segundos = 0;
 let minutos = 0;
-var intervalo;
+var cronometro;
+
 
 
 // Função para atualizar o contador
@@ -27,30 +28,52 @@ function atualizarContador() {
   var min = document.getElementById('minutos')
   var seg = document.getElementById('segundos')
   var mile = document.getElementById('milesimos')
+
   
-    innerHTML = min.innerHTML = `${minutos} `
+    innerHTML = min.innerHTML = `${minutos < 10 ? '0' : ''}${minutos} `
 
-    innerHTML = seg.innerHTML = `${segundos}`
+    innerHTML = seg.innerHTML = `${segundos < 10 ? '0' : ''}${segundos}`
 
-    innerHTML = mile.innerHTML = `${milissegundos }  `
+    innerHTML = mile.innerHTML = `${milissegundos < 99? '0' : ''}${milissegundos}   `
+
 }
+
 
 // Iniciar o contador
-
-function iniciar(){
-    setInterval(atualizarContador, 10);
+let iniciado = false;
+function iniciar() {
+  if (!iniciado) {
+    cronometro = setInterval(atualizarContador, 10);
     document.getElementById('iniciar').disabled = true;
-}
+    document.getElementById('parar').disabled = false;
+    iniciado = true;
+  }
+    
+} 
+
+
 // Parar contador 
 
-
 function parar() { 
-    document.getElementById('parar').disabled = true;
-    
-    
+    clearInterval(cronometro)
+    document.getElementById('iniciar').disabled = false;
+    var parar = document.getElementById('parar').disabled = true;
+    iniciado = false;
+}
 
-
+function limpar() {
+    var limpar = document.getElementById('limpar')
     
+    var min = document.getElementById('minutos')
+    var seg = document.getElementById('segundos')
+    var mile = document.getElementById('milesimos')
+
+    innerHTML = min.innerHTML = `00`
+
+    innerHTML = seg.innerHTML = `00`
+
+    innerHTML = mile.innerHTML = `000`
+    location.reload();
 }
 
 
